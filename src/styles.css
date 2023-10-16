@@ -1,0 +1,12 @@
+.line-anim {
+  animation: moveLine 2s linear infinite;
+}
+
+@keyframes moveLine {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

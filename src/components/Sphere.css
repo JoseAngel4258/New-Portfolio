@@ -1,0 +1,18 @@
+.sphere {
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle, #ffcc00, transparent);
+  border-radius: 50%;
+  position: absolute;
+  animation: orbit 5s linear infinite;
+  z-index: 999;
+}
+
+@keyframes orbit {
+  from {
+    transform: translateX(-50px) translateY(-50px) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50px) translateY(-50px) rotate(360deg);
+  }
+}
