@@ -1,17 +1,18 @@
-import Main from "./components/Main";
+import Header from "./components/Header";
 
-import Projects from "./components/Projects";
+import { BrowserRouter as Router } from "react-router-dom";
 
-import Work from "./components/Work";
+import { motion } from "framer-motion";
+import AnimRoutes from "./AnimRoutes";
 
 function App() {
   return (
-    <div className="overflow-x-hidden snap-mandatory mand z-0 font-medium">
-     
-      <Main />
-      <Work />
-      <Projects />
-    </div>
+    <>
+      <Router>
+        <Header />
+        <AnimRoutes />
+      </Router>
+    </>
   );
 }
 
