@@ -11,6 +11,8 @@ import {
 } from "react-icons/fa";
 
 import { transition1 } from "../utils/motion";
+import StarsBackground from "../components/StarsBackground";
+import VideoBackground from "../components/VideoBackground";
 
 const Home = () => {
   return (
@@ -20,8 +22,9 @@ const Home = () => {
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 1.5 }}
         transition={transition1}
-        className="h-screen flex flex-col bg-gray-800 items-center justify-center text-center overflow-hidden bg-[url('/assets/bg.jpg')] bg-cover bg-center"
+        className="h-screen flex flex-col items-center justify-center text-center overflow-hidden bg-transparent"
       >
+        <VideoBackground />
         <motion.img
           initial="hidden"
           whileInView="visible"

@@ -18,3 +18,12 @@ const services = [
     icon: punpun,
   },
 ];
+
+export const Skill_data = [
+  {
+    skill_name: "Html 5",
+    Image: "/assets/skills/html.png",
+    width: 80,
+    height: 80,
+  },
+];

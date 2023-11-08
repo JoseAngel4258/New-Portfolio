@@ -6,6 +6,8 @@ import Work from "./pages/Work";
 
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import StarsBackground from "./components/StarsBackground";
+import Skills from "./components/Skills";
 
 const AnimRoutes = () => {
   const location = useLocation();
@@ -20,6 +22,7 @@ const AnimRoutes = () => {
                 {" "}
                 <Home />
               </section>
+
               <section className="snap-center">
                 <Projects />
               </section>
@@ -29,9 +32,11 @@ const AnimRoutes = () => {
         <Route
           path="/about"
           element={
-            <div className="overflow-x-hidden ">
-              <section className="bg-gradient-to-b from-slate-950 to-slate-800">
+            <div className="overflow-x-hidden">
+              <section>
                 <About />
+                <Skills />
+                <StarsBackground />
               </section>
             </div>
           }
