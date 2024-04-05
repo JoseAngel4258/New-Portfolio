@@ -38,10 +38,7 @@ const Header = () => {
         scrolled ? "bg-slate-950" : ""
       }`}
     >
-      <div className="flex flex-col lg:flex-row lg:items-center w-full justify-between">
-        <Link to={"/"}>
-          <img className="w-[83px] object-cover" src={Logo} alt="Logo" />
-        </Link>
+      <div className="flex flex-col lg:flex-row lg:items-center w-full justify-end">
         <nav className="hidden lg:flex gap-x-11 font-semibold">
           <Link className="text-white hover:text-[#d7d7a8] transition" to={"/"}>
             Home

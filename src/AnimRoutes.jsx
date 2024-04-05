@@ -2,12 +2,10 @@ import React from "react";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
-import Work from "./pages/Work";
 
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import StarsBackground from "./components/StarsBackground";
-import Skills from "./components/Skills";
 
 const AnimRoutes = () => {
   const location = useLocation();
@@ -35,7 +33,6 @@ const AnimRoutes = () => {
             <div className="overflow-x-hidden">
               <section>
                 <About />
-                <Skills />
                 <StarsBackground />
               </section>
             </div>
