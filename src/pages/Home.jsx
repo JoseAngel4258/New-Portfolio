@@ -1,5 +1,6 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
 import BackgroundCircles from "../components/BackgroundCircles";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
@@ -118,10 +119,32 @@ const Home = () => {
             size={20}
           />
         </motion.div>
+        <div>
+          <motion.div
+            className=""
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.33, duration: 0.3 }}
+            variants={{
+              hidden: { opacity: 0, x: 100 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
+            <Link to={"/about"}>
+              <img
+                className="h-40 w-40 absolute right-0 top-1/2 -translate-y-1/2 transform -translate-x-[100%] hover:scale-110 transition"
+                src="/assets/flecha-derecha.png"
+                alt=""
+              />
+            </Link>
+          </motion.div>
+          <div></div>
+        </div>
+        <div className="absolute left-0 bottom-0 pl-5 pb-3 text-[#f5f5D9]">
+          <p>Copyright © All rights reserved. </p>
+        </div>
       </motion.section>
-      <div className="absolute left-0 bottom-0 pl-5 pb-3 text-[#f5f5D9]">
-        <p>Copyright © All rights reserved. </p>
-      </div>
     </>
   );
 };
