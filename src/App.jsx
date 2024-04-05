@@ -7,12 +7,12 @@ import AnimRoutes from "./AnimRoutes";
 
 function App() {
   return (
-    <>
+    <div className="font-vt323">
       <Router>
         <Header />
         <AnimRoutes />
       </Router>
-    </>
+    </div>
   );
 }
 

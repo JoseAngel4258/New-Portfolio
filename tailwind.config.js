@@ -10,8 +10,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        inter: ['inter', 'serif']
-      }
+        inter: ["Inter", "serif"],
+        vt323: ["VT323", "serif"],
+      },
     },
   },
   darkMode: "class",

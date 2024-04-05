@@ -7,23 +7,19 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import StarsBackground from "./components/StarsBackground";
 
+
 const AnimRoutes = () => {
   const location = useLocation();
   return (
     <AnimatePresence initial={true} mode="wait">
+      
       <Routes key={location.pathname} location={location}>
         <Route
           path="/"
           element={
-            <div className="h-[100vh] snap-y snap-mandatory overflow-scroll overflow-x-hidden z-0">
-              <section className="snap-center">
-                {" "}
-                <Home />
-              </section>
-
-              <section className="snap-center">
-                <Projects />
-              </section>
+            <div className="h-[100vh] font-light ">
+              {" "}
+              <Home />
             </div>
           }
         />

@@ -1,25 +1,37 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
 const VideoBackground = () => {
-  const videoRef = React.useRef(null);
+  const videoRef = useRef(null);
 
-  const playVideo = () => {
+  useEffect(() => {
+    const handleVideoEnd = () => {
+      if (videoRef.current) {
+        videoRef.current.currentTime = 0; // Set video time to the beginning
+        videoRef.current.play(); // Play the video again
+      }
+    };
+
     if (videoRef.current) {
-      videoRef.current.play();
+      videoRef.current.addEventListener("ended", handleVideoEnd);
     }
-  };
+
+    return () => {
+      if (videoRef.current) {
+        videoRef.current.removeEventListener("ended", handleVideoEnd);
+      }
+    };
+  }, []);
 
   return (
-    <div className="h-screen w-screen absolute inset-0 z-[-1] overflow-hidden">
+    <div className="h-screen w-screen absolute inset-0 z-[-1] overflow-hidden brightness-75">
       <video
         ref={videoRef}
         autoPlay
         loop
         muted
-        src="/assets/videos/milkyway.mp4"
+        src="/assets/videos/pixelroom.mp4"
         className="h-full w-full object-cover"
       />
-      <div className="h-full w-full bg-black opacity-75" />
     </div>
   );
 };
