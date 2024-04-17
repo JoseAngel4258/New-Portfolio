@@ -4,12 +4,13 @@ import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 import { staggerContainer } from "../utils/motion";
-import { TypeAnimation } from "react-type-animation";
+import { transition1 } from "../utils/motion";
 
 import webdev from "/assets/about/webdev.png";
 import nativedev from "/assets/about/nativedev.png";
 import gamedev from "/assets/about/gamedev.png";
 import contentdev from "/assets/about/contentdev.png";
+import GifBackground from "../components/GifBackground";
 
 const service = [
   { title: "Web Developer", icon: webdev },
@@ -31,11 +32,9 @@ const ServiceCard = ({ index, title, icon }) => {
           className="w-full green-pink-gradient p-[1.2px] rounded-[20px]"
           variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
         >
-          <div className="bg-slate-950 rounded-[20px] py-5 px-12 min-h-[360px] flex flex-col justify-evenly items-center">
+          <div className="bg-[#000000e1] backdrop-blur-sm rounded-[20px] py-5 px-12 min-h-[360px] flex flex-col justify-evenly items-center">
             <img src={icon} alt={title} className="w-20 h-20 object-cover" />
-            <h3 className="text-white text-[20px] font-bold text-center">
-              {title}
-            </h3>
+            <h3 className="text-[#f5f5d1] text-[20px] text-center">{title}</h3>
           </div>
         </motion.div>
       </Tilt>
@@ -46,9 +45,13 @@ const ServiceCard = ({ index, title, icon }) => {
 const About = () => {
   return (
     <>
-      <section
-        className="flex flex-col items-center justify-center gap-3 h-full pt-16 md:pt-36 xl:h-[100vh] relative"
-        style={{ transform: "scale(0.9" }}
+      <GifBackground src="/assets/night_city.gif" />
+      <motion.section
+        initial={{ opacity: 0, scale: 1.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 1.5 }}
+        transition={transition1}
+        className="flex flex-col items-center justify-center gap-3 h-full pt-24 md:pt-36 xl:h-[100vh] relative overflow-hidden"
       >
         <motion.h2
           initial="hidden"
@@ -59,27 +62,9 @@ const About = () => {
             hidden: { opacity: 0, x: -75 },
             visible: { opacity: 1, x: 0 },
           }}
-          className="text-white font-black md:text-[60px] sm:text-[60px] xs:text-[50px] text-[40px]"
+          className="text-[#f5f5D1] md:text-[65px] sm:text-[60px] xs:text-[50px] text-[40px] text-shadow "
         >
-          <TypeAnimation
-            sequence={[
-              // Same substring at the start will only be typed out once, initially
-              "Who Am I?",
-              2000, // wait 1s before replacing "Mice" with "Hamsters"
-              "What do I do?",
-              2000,
-              "My experience.",
-              2000,
-            ]}
-            wrapper="p"
-            speed={50}
-            style={{
-              fontSize: "1em",
-              display: "inline-block",
-              paddingLeft: "5px",
-            }}
-            repeat={Infinity}
-          />
+          Who am I?
         </motion.h2>
 
         <motion.p
@@ -91,22 +76,25 @@ const About = () => {
             hidden: { opacity: 0, x: -75 },
             visible: { opacity: 1, x: 0 },
           }}
-          className="mt-4 text-[#ffffffb7] text-[17px] max-w-[1266px] leading-[30px]"
+          className="mt-4 text-[#f5f5d1f1]  sm:text-[25px] text-xl max-w-[50%] sm:w-[900px] sm:max-w-[90%] leading-[30px] text-shadow"
         >
-          I'm a skilled software developer with experience in TypeScript and
-          JavaScript, and expertise in frameworks like React, Node.js, and
-          Three.js. I'm a quick learner and collaborate closely with clients to
-          create efficient, scalable, and user-friendly solutions that solve
-          real-world problems. Let's work together to bring your ideas to life!
+          I'm an experienced web developer specializing in{" "}
+          <span className="text-[#f7df1e]">JavaScript</span> and{" "}
+          <span className="text-[#007acc]">TypeScript</span>. I'm proficient in
+          frameworks like <span className="text-[#61dbfb]">React</span>,{" "}
+          <span className="text-[#68A063]">Node.js</span>,{" "}
+          <span className="text-[#ffff] text-shadow3">Three.js</span>, and{" "}
+          <span className="text-[#000] text-shadow2">Next.js</span>. Known for
+          my attention to detail, adaptability, and commitment to continuous
+          learning.
         </motion.p>
-        <div className="mt-20 flex flex-wrap justify-center gap-10">
+        <div className="mt-20 flex flex-wrap justify-center gap-10 max-w-[90%]">
           {service.map((service, index) => (
             <ServiceCard key={service.title} index={index} {...service} />
           ))}
         </div>
         <div className="h-16" />
-      </section>
-     
+      </motion.section>
     </>
   );
 };

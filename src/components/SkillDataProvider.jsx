@@ -1,7 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-
 
 const SkillDataProvider = ({ src, width, height, index }) => {
   const [inView, setInView] = useState(false);

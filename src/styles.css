@@ -1,9 +1,5 @@
-
-
 .green-pink-gradient {
-  background: "#00cea8";
-  background: linear-gradient(90.13deg, #00afce 1.9%, #cd61ff 97.5%);
-  background: -webkit-linear-gradient(-90.13deg, #00c0ce 1.9%, #ba52ff 97.5%);
+  background: beige;
 }
 
 ::-webkit-scrollbar {
@@ -20,4 +16,16 @@
 
 body {
   scrollbar-width: none; /* Para Firefox */
+}
+
+.text-shadow {
+  text-shadow: black 1px 1px 1px;
+}
+
+.text-shadow2 {
+  text-shadow: white 1.3px .5px;
+}
+
+.text-shadow3 {
+  text-shadow: black 1.3px 1.3px;
 }

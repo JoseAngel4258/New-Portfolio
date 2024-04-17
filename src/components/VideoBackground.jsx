@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 
-const VideoBackground = () => {
+const VideoBackground = ({ src }) => {
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const VideoBackground = () => {
         autoPlay
         loop
         muted
-        src="/assets/videos/pixelroom.mp4"
+        src={src}
         className="h-full w-full object-cover"
       />
     </div>

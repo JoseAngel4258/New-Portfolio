@@ -5,14 +5,16 @@ import Projects from "./pages/Projects";
 
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import StarsBackground from "./components/StarsBackground";
-
+import Circle from "./components/Circle";
 
 const AnimRoutes = () => {
   const location = useLocation();
   return (
     <AnimatePresence initial={true} mode="wait">
-      
+      <div className="hidden xl:block">
+        <Circle />
+      </div>
+
       <Routes key={location.pathname} location={location}>
         <Route
           path="/"
@@ -29,7 +31,6 @@ const AnimRoutes = () => {
             <div className="overflow-x-hidden">
               <section>
                 <About />
-                <StarsBackground />
               </section>
             </div>
           }

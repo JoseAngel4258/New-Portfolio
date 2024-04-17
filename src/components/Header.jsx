@@ -38,11 +38,19 @@ const Header = () => {
       }`}
     >
       <div className="flex flex-col lg:flex-row lg:items-center w-full justify-end">
-        <nav className="hidden lg:flex gap-x-11 font-concertOne text-2xl text-[#f5f5d1] ">
-          <Link to={"/"}>Home</Link>
-          <Link to={"/about"}>About</Link>
-          <Link to={"/projects"}>Projects</Link>
-          <Link to={"/contact"}>Contact</Link>
+        <nav className="hidden lg:flex gap-x-11 font-concertOne text-2xl text-[#f5f5d1] pt-5">
+          <Link className="hover:scale-125 transition-all" to={"/"}>
+            Home
+          </Link>
+          <Link className="hover:scale-125 transition-all" to={"/about"}>
+            About
+          </Link>
+          <Link className="hover:scale-125 transition-all" to={"/projects"}>
+            Projects
+          </Link>
+          <Link className="hover:scale-125 transition-all" to={"/contact"}>
+            Contact
+          </Link>
         </nav>
       </div>
       <MobileNav />

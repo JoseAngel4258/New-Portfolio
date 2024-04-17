@@ -4,21 +4,14 @@ import { Link } from "react-router-dom";
 import BackgroundCircles from "../components/BackgroundCircles";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-import {
-  FaTwitter,
-  FaFacebook,
-  FaInstagram,
-  FaLinkedinIn,
-} from "react-icons/fa";
 
 import { transition1 } from "../utils/motion";
 import VideoBackground from "../components/VideoBackground";
-import Circle from "../components/Circle";
 
 const Home = () => {
   return (
     <>
-      <Circle />
+      <VideoBackground src="/assets/videos/pixelroom.mp4" />
       <motion.section
         initial={{ opacity: 0, scale: 1.5 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -26,7 +19,6 @@ const Home = () => {
         transition={transition1}
         className="h-screen flex flex-col items-center justify-center text-center overflow-hidden bg-transparent text-[#dfdfbf]"
       >
-        <VideoBackground />
         <motion.img
           initial="hidden"
           whileInView="visible"
@@ -68,7 +60,7 @@ const Home = () => {
               hidden: { opacity: 0, x: -75 },
               visible: { opacity: 1, x: 0 },
             }}
-            className="flex sm:text-3xl text-2xl font-light text-[#f5f5D1] z-50 px-2 text-center"
+            className="flex sm:text-3xl text-2xl font-light text-[#f5f5D1] z-10 px-2 text-center"
           >
             <TypeAnimation
               sequence={[
@@ -100,24 +92,36 @@ const Home = () => {
             hidden: { opacity: 0, x: -75 },
             visible: { opacity: 1, x: 0 },
           }}
-          className="flex justify-between pt-5 max-w-[200px] w-full text-[#f5f5D9] z-50"
+          className="flex justify-between pt-5 max-w-[200px] w-full text-[#f5f5D9] z-10"
         >
-          <FaTwitter
-            className="cursor-pointer hover:scale-110 hover:text-cyan-400 ease-soft-spring duration-300"
-            size={20}
-          />
-          <FaFacebook
-            className="cursor-pointer hover:scale-110 ease-soft-spring duration-300"
-            size={20}
-          />
-          <FaInstagram
-            className="cursor-pointer hover:scale-110 ease-soft-spring duration-300"
-            size={20}
-          />
-          <FaLinkedinIn
-            className="cursor-pointer hover:scale-110 ease-soft-spring duration-300"
-            size={20}
-          />
+          <a href="mailto:josebravojs1810@gmail.com?Subject=I'm%20interested%20in%20contacting%20you!">
+            <img
+              className="w-8 h-8 hover:scale-110 transition-all"
+              src="/assets/instagram_pixel.png"
+              alt="Instagram"
+            />
+          </a>
+          <a href="mailto:josebravojs1810@gmail.com?Subject=I'm%20interested%20in%20contacting%20you!">
+            <img
+              className="w-8 h-8 hover:scale-110 transition-all"
+              src="/assets/twitter_pixel.png"
+              alt="Twitter"
+            />
+          </a>
+          <a href="mailto:josebravojs1810@gmail.com?Subject=I'm%20interested%20in%20contacting%20you!">
+            <img
+              className="w-8 h-8 hover:scale-110 transition-all"
+              src="/assets/facebook_pixel.png"
+              alt="Facebook"
+            />
+          </a>
+          <a href="mailto:josebravojs1810@gmail.com?Subject=I'm%20interested%20in%20contacting%20you!">
+            <img
+              className="w-8 h-8 hover:scale-110 transition-all"
+              src="/assets/linkedin_pixel.png"
+              alt="Linkedin"
+            />
+          </a>
         </motion.div>
         <div>
           <motion.div
@@ -133,15 +137,14 @@ const Home = () => {
           >
             <Link to={"/about"}>
               <img
-                className="h-40 w-40 absolute right-0 top-1/2 -translate-y-1/2 transform -translate-x-[100%] hover:scale-110 transition"
+                className="h-40 w-40 absolute right-0 top-1/2 -translate-y-1/2 transform -translate-x-[100%] hover:scale-110 transition hidden lg:block drop-shadow-2xl"
                 src="/assets/flecha-derecha.png"
                 alt=""
               />
             </Link>
           </motion.div>
-          <div></div>
         </div>
-        <div className="absolute left-0 bottom-0 pl-5 pb-3 text-[#f5f5D9]">
+        <div className="absolute left-0 bottom-0 pl-5 pb-3 text-[#f5f5D9] text-shadow">
           <p>Copyright © All rights reserved. </p>
         </div>
       </motion.section>

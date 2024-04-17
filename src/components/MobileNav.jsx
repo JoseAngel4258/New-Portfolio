@@ -28,7 +28,7 @@ const MobileNav = () => {
         initial="hidden"
         animate={openMenu ? "shows" : ""}
         transition={{ stiffness: 100, duration: 0.2 }}
-        className="bg-white shadow-2xl w-full absolute top-0 right-0 max-w-xs h-screen z-20"
+        className="bg-white shadow-2xl w-full absolute top-0 right-0 max-w-xs h-screen z-[9999999]"
       >
         <div
           onClick={toggleMenu}
