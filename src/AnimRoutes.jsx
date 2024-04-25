@@ -6,6 +6,7 @@ import Projects from "./pages/Projects";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Circle from "./components/Circle";
+import Contact from "./pages/Contact";
 
 const AnimRoutes = () => {
   const location = useLocation();
@@ -39,8 +40,18 @@ const AnimRoutes = () => {
           path="/projects"
           element={
             <div className="overflow-x-hidden z-0">
-              <section className="snap-center">
+              <section>
                 <Projects />
+              </section>
+            </div>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <div className="overflow-x-hidden z-0">
+              <section className="snap-center">
+                <Contact />
               </section>
             </div>
           }

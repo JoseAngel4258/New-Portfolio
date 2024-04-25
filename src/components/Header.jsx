@@ -38,7 +38,11 @@ const Header = () => {
       }`}
     >
       <div className="flex flex-col lg:flex-row lg:items-center w-full justify-end">
-        <nav className="hidden lg:flex gap-x-11 font-concertOne text-2xl text-[#f5f5d1] pt-5">
+        <nav
+          className={`hidden lg:flex gap-x-11 font-concertOne text-2xl text-[#f5f5d1] transition-all ${
+            scrolled ? "pt-0" : "pt-5"
+          }`}
+        >
           <Link className="hover:scale-125 transition-all" to={"/"}>
             Home
           </Link>

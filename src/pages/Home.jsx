@@ -47,7 +47,7 @@ const Home = () => {
               hidden: { opacity: 0, x: -75 },
               visible: { opacity: 1, x: 0 },
             }}
-            className="sm:text-[48px] text-[42px] font-normal text-[#f5f5d1] z-20"
+            className="sm:text-[49px] text-[44px] text-shadow font-normal text-[#f5f5d1] z-20"
           >
             I&apos;m José Ángel
           </motion.h1>
@@ -60,7 +60,7 @@ const Home = () => {
               hidden: { opacity: 0, x: -75 },
               visible: { opacity: 1, x: 0 },
             }}
-            className="flex sm:text-3xl text-2xl font-light text-[#f5f5D1] z-10 px-2 text-center"
+            className="flex brightness-[85%] sm:text-3xl text-2xl font-light text-[#f5f5D1] z-10 px-2 text-center"
           >
             <TypeAnimation
               sequence={[
@@ -119,6 +119,13 @@ const Home = () => {
             <img
               className="w-8 h-8 hover:scale-110 transition-all"
               src="/assets/linkedin_pixel.png"
+              alt="Linkedin"
+            />
+          </a>
+          <a href="mailto:josebravojs1810@gmail.com?Subject=I'm%20interested%20in%20contacting%20you!">
+            <img
+              className="w-8 h-8 hover:scale-110 transition-all"
+              src="/assets/github_pixel.png"
               alt="Linkedin"
             />
           </a>

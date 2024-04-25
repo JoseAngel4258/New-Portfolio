@@ -23,9 +23,13 @@ body {
 }
 
 .text-shadow2 {
-  text-shadow: white 1.3px .5px;
+  text-shadow: white 1.3px 0.5px;
 }
 
 .text-shadow3 {
   text-shadow: black 1.3px 1.3px;
+}
+
+.text-shadow3 {
+  text-shadow: black 1px 1px 2px;
 }

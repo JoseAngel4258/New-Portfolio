@@ -23,7 +23,7 @@ const VideoBackground = ({ src }) => {
   }, []);
 
   return (
-    <div className="h-screen w-screen absolute inset-0 z-[-1] overflow-hidden brightness-75">
+    <div className="h-screen w-screen fixed inset-0 z-[-1] overflow-hidden brightness-75">
       <video
         ref={videoRef}
         autoPlay
