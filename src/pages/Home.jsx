@@ -152,7 +152,7 @@ const Home = () => {
           </motion.div>
         </div>
         <div className="absolute left-0 bottom-0 pl-5 pb-3 text-[#f5f5D9] text-shadow">
-          <p>Copyright © All rights reserved. </p>
+          <p>© 2024 José Bravo </p>
         </div>
       </motion.section>
     </>
