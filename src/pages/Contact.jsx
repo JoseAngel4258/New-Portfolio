@@ -53,7 +53,7 @@ const Contact = () => {
                 </div>
                 <a
                   className="flex items-center  gap-3 w-[218px] text-[35px]"
-                  href="mailto:josebravojs1810@gmail.com?Subject=I'm%20interested%20in%20contacting%20you!"
+                  href="https://www.instagram.com/joseangeru/"
                 >
                   <img
                     className="w-20 h-20 hover:scale-110 transition-all"
@@ -64,7 +64,7 @@ const Contact = () => {
                 </a>
                 <a
                   className="flex items-center  gap-3 w-[218px] text-[35px]"
-                  href="mailto:josebravojs1810@gmail.com?Subject=I'm%20interested%20in%20contacting%20you!"
+                  href="https://twitter.com/joseangeru"
                 >
                   <img
                     className="w-20 h-20 hover:scale-110 transition-all"
@@ -75,7 +75,7 @@ const Contact = () => {
                 </a>
                 <a
                   className="flex items-center gap-3 w-[218px] text-[35px]"
-                  href="mailto:josebravojs1810@gmail.com?Subject=I'm%20interested%20in%20contacting%20you!"
+                  href="https://www.facebook.com/joseph.angel.184/"
                 >
                   <img
                     className="w-20 h-20 hover:scale-110 transition-all"
@@ -86,7 +86,7 @@ const Contact = () => {
                 </a>
                 <a
                   className="flex items-center gap-3 w-[218px] text-[35px]"
-                  href="mailto:josebravojs1810@gmail.com?Subject=I'm%20interested%20in%20contacting%20you!"
+                  href="https://www.linkedin.com/in/jos%C3%A9-%C3%A1ngel-bravo-859839218/"
                 >
                   <img
                     className="w-20 h-20 hover:scale-110 transition-all"
@@ -99,7 +99,17 @@ const Contact = () => {
             </div>
           </div>
         </div>{" "}
-        <motion.div className="backdrop-filter backdrop-blur-lg w-full mt-12 lg:mt-28 lg:h-[350px] h-[550px] items-center justify-center flex">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.2, duration: 0.35 }}
+          variants={{
+            hidden: { opacity: 0, y: 75 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          className="backdrop-filter backdrop-blur-lg w-full mt-12 lg:mt-28 lg:h-[350px] h-[550px] items-center justify-center flex"
+        >
           <div className="w-full flex">
             <div className="w-[100%] flex">
               <form

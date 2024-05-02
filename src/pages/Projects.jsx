@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { transition1 } from "../utils/motion";
 import { fadeIn } from "../utils/motion";
 import { staggerContainer } from "../utils/motion";
-
+import { Link } from "react-router-dom";
 import VideoBackground from "../components/VideoBackground";
 
 const cards = [
@@ -124,7 +124,7 @@ const Projects = () => {
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 1.5 }}
         transition={transition1}
-        className="flex flex-col items-center justify-center pt-[24%] xl:pt-[6%] overflow-hidden"
+        className="flex flex-col items-center justify-center pt-[24%] xl:pt-[6%] overflow-hidden relative"
       >
         <motion.h2
           initial="hidden"
@@ -135,7 +135,7 @@ const Projects = () => {
             hidden: { opacity: 0, x: -75 },
             visible: { opacity: 1, x: 0 },
           }}
-          className=" md:text-[70px] sm:text-[60px] xs:text-[50px] text-[50px] text-shadow text-shadow1 text-[#f5f5d1]"
+          className=" md:text-[70px] sm:text-[60px] xs:text-[50px] text-[50px] text-shadow text-[#f5f5d1]"
         >
           Projects
         </motion.h2>
@@ -147,8 +147,15 @@ const Projects = () => {
             ))}
           </div>
         </div>
-        <div className="h-48" />
-      </motion.section>{" "}
+
+        <div className="h-24" />
+        <Link to={"/projects"}>
+          <img
+            className="w-60 absolute right-0 top-[40%] -translate-y-1/2 transform -translate-x-[45%] hover:scale-110 transition hidden lg:block drop-shadow-2xl"
+            src="/assets/next.png"
+          />
+        </Link>
+      </motion.section>
     </>
   );
 };

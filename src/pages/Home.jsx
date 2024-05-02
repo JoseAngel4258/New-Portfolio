@@ -11,7 +11,7 @@ import VideoBackground from "../components/VideoBackground";
 const Home = () => {
   return (
     <>
-      <VideoBackground src="/assets/videos/pixelroom.mp4" />
+      <VideoBackground src="/assets/videos/pixel-room.mp4" />
       <motion.section
         initial={{ opacity: 0, scale: 1.5 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -60,13 +60,12 @@ const Home = () => {
               hidden: { opacity: 0, x: -75 },
               visible: { opacity: 1, x: 0 },
             }}
-            className="flex brightness-[85%] sm:text-3xl text-2xl font-light text-[#f5f5D1] z-10 px-2 text-center"
+            className="flex brightness-[85%] sm:text-3xl text-2xl font-light text-[#f5f5D1] z-10 px-2 text-center -mt-3"
           >
             <TypeAnimation
               sequence={[
-                // Same substring at the start will only be typed out once, initially
                 "Coder.jsx",
-                2000, // wait 1s before replacing "Mice" with "Hamsters"
+                2000,
                 "<FrontEndDeveloper />",
                 2000,
                 "Game-Developer.exe",
@@ -77,7 +76,6 @@ const Home = () => {
               style={{
                 fontSize: "1em",
                 display: "inline-block",
-                paddingLeft: "5px",
               }}
               repeat={Infinity}
             />
@@ -131,25 +129,12 @@ const Home = () => {
           </a>
         </motion.div>
         <div>
-          <motion.div
-            className=""
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 0.33, duration: 0.3 }}
-            variants={{
-              hidden: { opacity: 0, x: 100 },
-              visible: { opacity: 1, x: 0 },
-            }}
-          >
-            <Link to={"/about"}>
-              <img
-                className="h-40 w-40 absolute right-0 top-1/2 -translate-y-1/2 transform -translate-x-[100%] hover:scale-110 transition hidden lg:block drop-shadow-2xl"
-                src="/assets/flecha-derecha.png"
-                alt=""
-              />
-            </Link>
-          </motion.div>
+          <Link to={"/about"}>
+            <img
+              className="w-64 absolute right-0 top-1/2 -translate-y-1/2 transform -translate-x-[70%] hover:scale-110 transition hidden lg:block drop-shadow-2xl"
+              src="/assets/next.png"
+            />
+          </Link>
         </div>
         <div className="absolute left-0 bottom-0 pl-5 pb-3 text-[#f5f5D9] text-shadow">
           <p>© 2024 José Bravo </p>

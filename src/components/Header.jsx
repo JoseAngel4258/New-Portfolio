@@ -39,7 +39,7 @@ const Header = () => {
     >
       <div className="flex flex-col lg:flex-row lg:items-center w-full justify-end">
         <nav
-          className={`hidden lg:flex gap-x-11 font-concertOne text-2xl text-[#f5f5d1] transition-all ${
+          className={`hidden lg:flex gap-x-11 font-concertOne text-[30px] text-shadow text-[#f5f5d1] transition-all ${
             scrolled ? "pt-0" : "pt-5"
           }`}
         >

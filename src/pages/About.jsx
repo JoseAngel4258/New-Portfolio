@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 import { staggerContainer } from "../utils/motion";
 import { transition1 } from "../utils/motion";
+import { Link } from "react-router-dom";
 
 import webdev from "/assets/about/webdev.png";
 import nativedev from "/assets/about/nativedev.png";
@@ -93,6 +94,12 @@ const About = () => {
             <ServiceCard key={service.title} index={index} {...service} />
           ))}
         </div>
+        <Link to={"/projects"}>
+          <img
+            className="w-60 absolute right-0 top-1/2 -translate-y-1/2 transform -translate-x-[45%] hover:scale-110 transition hidden lg:block drop-shadow-2xl"
+            src="/assets/next.png"
+          />
+        </Link>
         <div className="h-16" />
       </motion.section>
     </>
